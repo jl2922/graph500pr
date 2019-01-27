@@ -1,8 +1,8 @@
 # -*- Makefile -*-
 # Copyright 2010-2011, Georgia Institute of Technology, USA.
 # See COPYING for license.
-CC = gcc-4.6 -flto -fwhole-program
-CFLAGS = -g -std=c99 -Wall -O3 -march=native
+CC = gcc -flto -fwhole-program
+CFLAGS = -std=c99 -Wall -O3 -march=native
 LDLIBS = -lm -lrt
 
 ## Uncomment if you have libnuma and want a numactl-aware malloc.
@@ -13,8 +13,8 @@ LDLIBS = -lm -lrt
 # CPPFLAGS += -DUSE_MMAP_LARGE -DUSE_MMAP_LARGE_EXT
 
 ## Uncomment to build OpenMP examples.
-# BUILD_OPENMP = Yes
-# CFLAGS_OPENMP = -fopenmp
+BUILD_OPENMP = Yes
+CFLAGS_OPENMP = -fopenmp
 
 ## Uncomment to build the MPI code using default compilers, etc.
 # BUILD_MPI = Yes

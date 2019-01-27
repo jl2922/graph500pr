@@ -70,6 +70,11 @@ main (int argc, char **argv)
   }
   if (VERBOSE) fprintf (stderr, " done.\n");
 
+  for (size_t i = 0; i < nedge; i++) {
+    printf("%zu %zu\n", IJ[i].v0, IJ[i].v1);
+  }
+  exit(0);
+
   if (dumpname)
     fd = open (dumpname, O_WRONLY|O_CREAT|O_TRUNC, 0666);
   else
